@@ -1,10 +1,10 @@
 'use strict';
 
 var should = require('chai').should();
-var bitcore = require('../..');
-var BufferWriter = bitcore.encoding.BufferWriter;
-var BufferReader = bitcore.encoding.BufferReader;
-var BN = bitcore.crypto.BN;
+var vertcore = require('../..');
+var BufferWriter = vertcore.encoding.BufferWriter;
+var BufferReader = vertcore.encoding.BufferReader;
+var BN = vertcore.crypto.BN;
 
 describe('BufferReader', function() {
 
@@ -213,7 +213,7 @@ describe('BufferReader', function() {
     });
 
     it('should return max number of satoshis', function() {
-      var maxSatoshis = 21000000 * 1e8;
+      var maxSatoshis = 84000000 * 1e8;
       var maxSatoshisBuffer = new Buffer('0040075af0750700', 'hex');
       var br = new BufferReader(maxSatoshisBuffer);
       br.readUInt64LEBN().toNumber().should.equal(maxSatoshis);
