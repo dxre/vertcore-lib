@@ -1,0 +1,14 @@
+[Place 30-574] Poor placement for routing between an IO pin and BUFG. If this sub optimal condition is acceptable for this design, you may use the CLOCK_DEDICATED_ROUTE constraint in the .xdc file to demote this message to a WARNING. However, the use of this override is highly discouraged. These examples can be used directly in the .xdc file to override this clock rule.
+	< set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets BTNR_IBUF] >
+
+	BTNR_IBUF_inst (IBUF.O) is locked to IOB_X0Y79
+	 and BTNR_IBUF_BUFG_inst (BUFG.I) is provisionally placed by clockplacer on BUFGCTRL_X0Y0
+
+	 
+	 https://www.aliexpress.com/item/1m-4m-5m-ws2812b-ws2812-led-strip-30-60-74-96-144pixels-leds-m-individually-addressable/32742461421.html?spm=a2g0s.9042311.0.0.igTnRu
+	 
+	 
+	 
+if ((currentY > "0001100100" and currentX <= "0101011110" and currentY < "0011001000") or (currentY >= "0100100111" and currentX <= "0101011110" and currentY < "0101111000")  or (currentY >= "0011011011" and currentX >= "0001010101" and currentY < "0100001110")) then --If you are past the bound
+
+vertdev
